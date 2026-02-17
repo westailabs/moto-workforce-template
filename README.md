@@ -1,6 +1,6 @@
 # Moto Workforce — AI Assistant Template
 
-Your own AI assistant, powered by [OpenClaw](https://openclaw.com) and Claude.
+Your own AI assistant, powered by [OpenClaw](https://github.com/openclaw/openclaw) and Claude.
 
 ## Quick Start
 
@@ -27,22 +27,27 @@ Then message your Telegram bot — it's alive! 🏍️
 - **Anthropic API key** — [console.anthropic.com](https://console.anthropic.com) (~$5–20/month)
 - **Telegram bot token** — create one via [@BotFather](https://t.me/BotFather)
 
-## Windows Users
+## Setup Guides
 
-See the full step-by-step guide: [Windows Setup Guide](docs/product/moto-workforce-windows-setup.md)
+Detailed step-by-step instructions for every platform:
 
-## Files
+| Platform | Guide | Path |
+|---|---|---|
+| 🪟 **Windows** | WSL2 + Docker Desktop | [docs/SETUP-WINDOWS.md](docs/SETUP-WINDOWS.md) |
+| 🐧 **Ubuntu / Linux** | Bare metal (no Docker) | [docs/SETUP-UBUNTU.md](docs/SETUP-UBUNTU.md) |
+| 🍎 **Mac** | Bare metal + Docker options | [docs/SETUP-MAC.md](docs/SETUP-MAC.md) |
+
+> All guides are written for beginners — no Linux experience required.
+
+## Workspace Files
 
 | File | Purpose |
 |---|---|
-| `docker-compose.yml` | Container configuration |
-| `.env.example` | Template for API keys |
-| `setup.sh` | Interactive setup script |
-| `workspace/SOUL.md` | Assistant personality |
-| `workspace/USER.md` | Your profile (fill this in!) |
-| `workspace/AGENTS.md` | Operating instructions |
-| `workspace/TOOLS.md` | Tool-specific notes |
-| `workspace/HEARTBEAT.md` | Recurring task checklist |
+| `workspace/SOUL.md` | Assistant personality — who it is |
+| `workspace/USER.md` | Your profile — **fill this in!** |
+| `workspace/AGENTS.md` | Operating procedures |
+| `workspace/TOOLS.md` | Tool-specific notes (starts empty) |
+| `workspace/HEARTBEAT.md` | Background task checklist |
 | `workspace/MEMORY.md` | Long-term memory (starts empty) |
 
 ## Commands
@@ -54,6 +59,20 @@ docker compose logs -f     # View logs
 docker compose restart     # Restart
 ```
 
+## How It Works
+
+This template gives you a personal AI assistant that:
+
+- **Lives on your hardware** — your data never leaves your machine
+- **Talks via Telegram** — message it like a friend
+- **Remembers you** — builds long-term memory over time
+- **Runs autonomously** — checks email, calendar, and more on its own
+- **Is fully customizable** — edit the workspace files to make it yours
+
+## License
+
+MIT
+
 ---
 
-*Built by West AI Labs*
+<sub>Built by [West AI Labs](https://westailabs.com) · AI Infrastructure That Ships</sub>
